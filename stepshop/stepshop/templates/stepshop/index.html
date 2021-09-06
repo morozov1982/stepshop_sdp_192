@@ -32,7 +32,13 @@ https://www.tooplate.com/view/2114-pixie
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <span>Suspendisse laoreet magna vel diam lobortis imperdiet</span>
+            <span>
+              {% if user.is_authenticated %}
+                {{ user.username|title }}
+              {% else %}
+                Не авторизован
+              {% endif %}
+            </span>
           </div>
         </div>
       </div>
@@ -48,18 +54,18 @@ https://www.tooplate.com/view/2114-pixie
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home
+              <a class="nav-link" href="/">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products.html">Products</a>
+              <a class="nav-link" href="/products/">Products</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a class="nav-link" href="/about/">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+              <a class="nav-link" href="/contacts/">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -253,9 +259,7 @@ https://www.tooplate.com/view/2114-pixie
         <div class="row">
           <div class="col-md-12">
             <div class="copyright-text">
-              <p>Copyright &copy; 2019 Company Name 
-                
-                - Design: <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p>
+              <p>Copyright &copy; 2019 - {% now "Y" %} Бобёр INC.</p>
             </div>
           </div>
         </div>
