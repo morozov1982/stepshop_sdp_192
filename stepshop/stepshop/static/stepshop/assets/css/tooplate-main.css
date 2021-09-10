@@ -80,11 +80,12 @@ a {
 	border-bottom: 1px solid #eee;
 }
 #navbarResponsive {
-	z-index: 999;
+    justify-content: center;
+	/*z-index: 999;
 	position: absolute;
 	left: 50%;
 	top: 105px;
-	transform: translateX(-50%);
+	transform: translateX(-50%);*/
 }
 .navbar-dark .navbar-nav .nav-item {
 	margin: 0px 15px;
@@ -103,7 +104,7 @@ a {
 .navbar-dark .navbar-nav .show>.nav-link {
 	color: #3a8bcd;
 }
-.navbar:after {
+/*.navbar:after {
 	width: 100%;
 	height: 1px;
 	background-color: #eee;
@@ -111,7 +112,7 @@ a {
 	position: absolute;
 	left: 0;
 	bottom: -52px;
-}
+}*/
 .navbar-dark .navbar-toggler-icon {
 	background-image: none;
 }
@@ -130,7 +131,7 @@ a {
 }
 /* Banner Style */
 .banner {
-	margin-top: 50px;
+	/*margin-top: 50px;*/
 	background-image: url(../images/banner-bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
