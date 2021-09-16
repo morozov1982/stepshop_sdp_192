@@ -26,5 +26,16 @@ def products(request, pk=None):
     return render(request, 'mainapp/products.html', context)
 
 
-def product(request):
-    return render(request, 'mainapp/product.html')
+def product(request, pk):
+    title = 'продукт'
+
+    links_menu = ProductCategory.objects.all()
+    product_item = get_object_or_404(Product, id=pk)
+
+    context = {
+        'title': title,
+        'links_menu': links_menu,
+        'product': product_item,
+    }
+
+    return render(request, 'mainapp/product.html', context)
