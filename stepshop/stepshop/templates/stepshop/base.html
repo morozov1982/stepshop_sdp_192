@@ -38,19 +38,27 @@ https://www.tooplate.com/view/2114-pixie
           <div class="col-md-12">
 
             {% if user.is_authenticated %}
-            <span>
-              <a href="{% url 'auth:edit' %}" style="color:white;">
-                {{ user.first_name|default:user.username }}
+              <a href="{% url 'auth:edit' %}">
+                <span>{{ user.first_name|default:user.username }}</span>
               </a>
-            </span>
-            <span>
-              <a href="{% url 'auth:logout' %}" style="color:white;">Выйти</a>
-            </span>
+
+              <a href="{% url 'auth:logout' %}">
+                <span>Выйти</span>
+              </a>
+
             {% else %}
-            <span>
-              <a href="{% url 'auth:login' %}" style="color:white;">Войти</a>
-            </span>
+              <a href="{% url 'auth:login' %}">
+                <span>Войти</span>
+              </a>
             {% endif %}
+
+            <a href="{% url 'basket:view' %}" class="basket">
+              {% if basket %}
+                <span>{{ basket|length }}</span>
+              {% endif %}
+            </a>
+
+
 
           </div>
         </div>
