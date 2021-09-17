@@ -34,6 +34,12 @@
     margin-bottom: 5px;
 }
 
+#pre-header .price {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
 
 #filters a {
     color: #1e1e1e;

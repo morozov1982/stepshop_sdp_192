@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="{% static 'stepshop/assets/css/tooplate-main.css' %}">
     <link rel="stylesheet" href="{% static 'stepshop/assets/css/owl.css' %}">
 
+    <link rel="stylesheet" href="{% static 'mainapp/style.css' %}">
+
     {% block css %}
     {% endblock %}
 <!--
@@ -54,11 +56,11 @@ https://www.tooplate.com/view/2114-pixie
 
             <a href="{% url 'basket:view' %}" class="basket">
               {% if basket %}
-                <span>{{ basket|length }}</span>
+                <span>{{ basket.0.total_quantity }}</span>
               {% endif %}
             </a>
 
-
+            <span class="price">${{ basket.0.total_cost|floatformat:0 }}</span>
 
           </div>
         </div>
