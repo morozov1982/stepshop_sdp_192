@@ -11,7 +11,6 @@ def login(request):
     title = 'вход'
 
     login_form = ShopUserLoginForm(data=request.POST)
-
     _next = request.GET['next'] if 'next' in request.GET.keys() else ''
 
     if request.method == 'POST' and login_form.is_valid():
