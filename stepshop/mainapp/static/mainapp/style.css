@@ -41,6 +41,12 @@
 }
 
 
+.basket_list {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
 #filters a {
     color: #1e1e1e;
     font-size: 15px;

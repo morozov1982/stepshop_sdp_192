@@ -13,8 +13,12 @@ def basket(request):
     if request.user.is_authenticated:
         basket_item = Basket.objects.filter(user=request.user)
 
+        for item in basket_item:
+            item.product_total_price = item.product.price * item.quantity
+
         context = {
             'basket': basket_item,
+            # 'product_total_price': product_total_price,
         }
 
         return render(request, 'basketapp/basket.html', context)
@@ -57,9 +61,12 @@ def basket_edit(request, pk, quantity):
             'basket': basket,
         }
 
-        result = render_to_string('basketapp/includes/inc_basket_list.html', context)
+        product_total_price = basket_item.product.price * basket_item.quantity
 
-        return JsonResponse({'result': result})
+        # result = render_to_string('basketapp/includes/inc_basket_list.html', context)
+        result = render_to_string('basketapp/includes/inc_basket_summary.html', context)
+
+        return JsonResponse({'result': result, 'product_total_price': product_total_price})
 
 
 
