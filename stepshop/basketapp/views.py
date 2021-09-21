@@ -69,7 +69,6 @@ def basket_edit(request, pk, quantity):
         return JsonResponse({'result': result, 'product_total_price': product_total_price})
 
 
-
 @login_required
 def basket_remove(request, pk):
     basket_record = get_object_or_404(Basket, id=pk)
