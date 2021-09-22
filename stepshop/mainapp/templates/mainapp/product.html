@@ -1,5 +1,6 @@
 {% extends 'stepshop/base.html' %}
 {% load static %}
+{% load default_image_tags %}
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'mainapp/style.css' %}">
@@ -20,11 +21,7 @@
           <div class="col-md-6">
             <div class="product-slider">
               <div id="slider" class="flexslider">
-                <img src="
-                          {% if product.image %}
-                          {{ product.image.url }}
-                          {% endif %}
-                         " alt="{{ product.name }}" />
+                <img src="{{ product.image|default_product_image }}" alt="{{ product.name }}" />
               </div>
             </div>
           </div>
@@ -79,7 +76,7 @@
               {% for product in same_products %}
               <a href="{% url 'products:product' product.pk %}">
                 <div class="featured-item">
-                  <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                  <img src="{{ product.image|default_product_image }}" alt="{{ product.name }}">
                   <h4>{{ product.name }}</h4>
                   <h6>${{ product.price }}</h6>
                 </div>
