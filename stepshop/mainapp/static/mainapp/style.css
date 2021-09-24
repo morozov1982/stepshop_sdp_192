@@ -65,3 +65,9 @@
 .single-product {
     margin-top: 50px;
 }
+
+input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: auto;
+}
