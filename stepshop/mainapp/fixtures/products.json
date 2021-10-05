@@ -10,8 +10,9 @@
       "description": "Строит плотины, приятный собеседник",
       "price": "500.00",
       "quantity": 6,
-      "created_at": "2021-09-10T09:30:41.820",
-      "updated_at": "2021-09-10T09:30:41.820"
+      "is_active": true,
+      "created_at": "2021-09-14T19:10:42.383",
+      "updated_at": "2021-09-14T19:10:42.383"
     }
   },
   {
@@ -25,8 +26,9 @@
       "description": "Продаются поштучно",
       "price": "621.03",
       "quantity": 9,
-      "created_at": "2021-09-10T09:30:41.916",
-      "updated_at": "2021-09-10T09:30:41.916"
+      "is_active": true,
+      "created_at": "2021-09-14T19:10:42.471",
+      "updated_at": "2021-09-14T19:10:42.471"
     }
   },
   {
@@ -40,8 +42,9 @@
       "description": "Сносу им нет, можно рельсы ложить в них",
       "price": "500.00",
       "quantity": 3,
-      "created_at": "2021-09-10T09:30:41.995",
-      "updated_at": "2021-09-10T09:30:41.995"
+      "is_active": true,
+      "created_at": "2021-09-14T19:10:42.551",
+      "updated_at": "2021-09-14T19:10:42.551"
     }
   },
   {
@@ -55,8 +58,9 @@
       "description": "Красота, ноги в них пахнут розочками",
       "price": "250.00",
       "quantity": 21,
-      "created_at": "2021-09-10T09:30:42.158",
-      "updated_at": "2021-09-10T09:30:42.158"
+      "is_active": true,
+      "created_at": "2021-09-14T19:10:42.640",
+      "updated_at": "2021-09-14T19:10:42.640"
     }
   },
   {
@@ -70,8 +74,137 @@
       "description": "",
       "price": "253.00",
       "quantity": 7,
-      "created_at": "2021-09-10T09:30:42.251",
-      "updated_at": "2021-09-10T09:30:42.251"
+      "is_active": true,
+      "created_at": "2021-09-14T19:10:42.731",
+      "updated_at": "2021-09-14T19:10:42.731"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 6,
+    "fields": {
+      "category": 5,
+      "name": "Бобр",
+      "image": "product_images/django_postgres_logo.png",
+      "short_desc": "Бобр подлежит удалению",
+      "description": "Бобр для удаления ибо не бобёр",
+      "price": "100.00",
+      "quantity": 2,
+      "is_active": true,
+      "created_at": "2021-09-24T21:06:57.743",
+      "updated_at": "2021-09-24T21:06:57.743"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 7,
+    "fields": {
+      "category": 1,
+      "name": "Синий бобёр",
+      "image": "product_images/product-03_r7EY5FN.jpg",
+      "short_desc": "Очень синий",
+      "description": "На столько синий, что лыка не вяжет",
+      "price": "53.00",
+      "quantity": 21,
+      "is_active": false,
+      "created_at": "2021-09-28T20:00:23.370",
+      "updated_at": "2021-09-28T20:55:37.474"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 8,
+    "fields": {
+      "category": 3,
+      "name": "Жынсы",
+      "image": "product_images/product-01.jpg",
+      "short_desc": "Жынсы с ошыбком",
+      "description": "Лень писать",
+      "price": "53.00",
+      "quantity": 4,
+      "is_active": true,
+      "created_at": "2021-10-04T19:39:59.318",
+      "updated_at": "2021-10-04T19:39:59.318"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 12,
+    "fields": {
+      "category": 3,
+      "name": "Жынсысы New",
+      "image": "product_images/product-06.jpg",
+      "short_desc": "Уникальный дизайн",
+      "description": "Лентяйство",
+      "price": "25.12",
+      "quantity": 8,
+      "is_active": true,
+      "created_at": "2021-10-04T20:06:19.926",
+      "updated_at": "2021-10-04T20:19:48.821"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 13,
+    "fields": {
+      "category": 3,
+      "name": "Жынтсы 9",
+      "image": "",
+      "short_desc": "фывфв",
+      "description": "фывфывф",
+      "price": "34.00",
+      "quantity": 6,
+      "is_active": true,
+      "created_at": "2021-10-04T20:44:45.389",
+      "updated_at": "2021-10-04T20:44:45.389"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 14,
+    "fields": {
+      "category": 3,
+      "name": "TEST",
+      "image": "",
+      "short_desc": "",
+      "description": "",
+      "price": "0.00",
+      "quantity": 0,
+      "is_active": false,
+      "created_at": "2021-10-04T22:13:05.469",
+      "updated_at": "2021-10-04T22:14:17.399"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 15,
+    "fields": {
+      "category": 3,
+      "name": "TEST-2",
+      "image": "",
+      "short_desc": "",
+      "description": "",
+      "price": "0.00",
+      "quantity": 0,
+      "is_active": false,
+      "created_at": "2021-10-04T22:14:04.471",
+      "updated_at": "2021-10-04T22:14:23.008"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 16,
+    "fields": {
+      "category": 3,
+      "name": "Галифе",
+      "image": "",
+      "short_desc": "Штаны Сталина",
+      "description": "Очень удобны для прятания бутылок",
+      "price": "61.00",
+      "quantity": 7,
+      "is_active": true,
+      "created_at": "2021-10-05T19:12:03.442",
+      "updated_at": "2021-10-05T19:13:06.246"
     }
   }
 ]

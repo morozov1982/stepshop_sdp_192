@@ -4,7 +4,8 @@
     "pk": 1,
     "fields": {
       "name": "Бобры",
-      "description": "Трудяги ещё те"
+      "description": "Трудяги ещё те и ещё другие",
+      "is_active": true
     }
   },
   {
@@ -12,7 +13,8 @@
     "pk": 2,
     "fields": {
       "name": "Обувь",
-      "description": ""
+      "description": "",
+      "is_active": true
     }
   },
   {
@@ -20,7 +22,8 @@
     "pk": 3,
     "fields": {
       "name": "Штаны",
-      "description": ""
+      "description": "",
+      "is_active": true
     }
   },
   {
@@ -28,7 +31,44 @@
     "pk": 4,
     "fields": {
       "name": "Смартфоны",
-      "description": ""
+      "description": "",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 5,
+    "fields": {
+      "name": "Удалямба",
+      "description": "",
+      "is_active": false
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 6,
+    "fields": {
+      "name": "Удалямба 2",
+      "description": "Просто для удаления",
+      "is_active": false
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 7,
+    "fields": {
+      "name": "Удалямба 3",
+      "description": "Снова удаляем",
+      "is_active": false
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 8,
+    "fields": {
+      "name": "Удалямба 4 (update-ная)",
+      "description": "",
+      "is_active": false
     }
   }
 ]

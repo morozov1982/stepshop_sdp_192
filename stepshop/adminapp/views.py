@@ -271,7 +271,7 @@ class ProductsListView(ListView):
     model = Product
     template_name = 'adminapp/products.html'
     context_object_name = 'product_list'
-    paginate_by = 1
+    paginate_by = 3
 
     def get_queryset(self):
         return Product.objects.filter(category__pk=self.kwargs.get('pk')).order_by('name')
@@ -328,7 +328,7 @@ class ProductCreateView(CreateView):
     model = Product
     template_name = 'adminapp/product/product_create.html'
     form_class = ProductEditForm
-    # success_url = reverse_lazy('admin_staff:products')  # , args=[3])  # reverse('admin_staff:products', args=[pk])
+    # success_url = reverse_lazy('admin_staff:products')  # , args=[3])
     # self.success_url = reverse('admin_staff:products', args=[self.get_object().category.pk])
 
     def get_success_url(self):
@@ -371,7 +371,10 @@ class ProductUpdateView(UpdateView):
     form_class = ProductEditForm
     template_name = 'adminapp/product/product_update.html'
     context_object_name = 'product'
-    success_url = reverse_lazy('admin_staff:categories')
+    # success_url = reverse_lazy('admin_staff:categories')
+
+    def get_success_url(self):
+        return reverse('admin_staff:products', args=[self.get_object().category.pk])
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
